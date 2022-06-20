@@ -58,6 +58,64 @@
                             </ul>
                         </li>
                         {{-- المنتجات --}}
+
+                        {{-- العروض --}}
+                        <li class="nav-item has-treeview  @yield('offers_open')">
+                            <a href="#" class="nav-link @yield('offers')">
+                            <i class="nav-icon fas fa-th"></i>
+                            {{-- <img src="{{asset('uploads/location_64px.png')}}" alt=""> --}}
+
+                            <p>
+                            <i class="right fas fa-angle-left"></i>
+                            العروض
+                            </p>
+                            </a>
+                            <ul class="nav nav-treeview" >
+                                <li class="nav-item">
+                                    <a href="{{route('offers.index')}}" class="nav-link @yield('offers_index')">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>كل العروض</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{route('offers.create')}}" class="nav-link @yield('offers_create')">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>إضافة عرض جديد</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        {{-- العروض --}}
+
+
+                        {{-- التقارير --}}
+                        <li class="nav-item has-treeview  @yield('report_open')">
+                            <a href="#" class="nav-link @yield('report')">
+                            <i class="nav-icon fas fa-th"></i>
+                            {{-- <img src="{{asset('uploads/location_64px.png')}}" alt=""> --}}
+
+                            <p>
+                            <i class="right fas fa-angle-left"></i>
+                            التقارير
+                            </p>
+                            </a>
+                            <ul class="nav nav-treeview" >
+                                <li class="nav-item">
+                                    <a href="{{route('report.product')}}" class="nav-link @yield('report_product')">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>تقرير عدد المنتجات</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{route('report.index')}}" class="nav-link @yield('report_index')">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>تقرير عن المنتجات</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        {{-- التقارير --}}
+
                         {{-- <li class="nav-item">
                             <a href="{{route('setting')}}" class="nav-link @yield('setting')">
                             <i class="nav-icon far fa-calendar-alt"></i>

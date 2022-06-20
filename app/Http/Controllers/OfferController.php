@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
+use App\Models\Offer;
 use App\Traits\Oprations;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class OfferController extends Controller
 {
     use Oprations;
     /**
@@ -16,7 +16,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return $this->index_data(Product::class, 'Products.index');
+        return $this->index_data(Offer::class, 'offers.index');
     }
 
     /**
@@ -26,7 +26,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return $this->create_date('Products.create');
+        return $this->create_date('offers.create');
     }
 
     /**
@@ -37,7 +37,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        return $this->store_data(Product::class, $request, 'products.index');
+        return $this->store_data(Offer::class, $request, 'offers.index');
     }
 
     /**
@@ -59,7 +59,7 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        return $this->edit_data(Product::class, $id, 'Products.edit');
+        return $this->edit_data(Offer::class, $id, 'offers.edit');
     }
 
     /**
@@ -71,7 +71,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return $this->update_data(Product::class, $request, $id, 'products.index');
+        return $this->update_data(Offer::class, $request, $id, 'offers.index');
     }
 
     /**
@@ -82,6 +82,6 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        return $this->delete_data(Product::class, $id, 'products.index');
+        return $this->delete_data(Offer::class, $id, 'offers.index');
     }
 }

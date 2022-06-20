@@ -1,0 +1,294 @@
+{
+	"info": {
+		"_postman_id": "6fd767d6-2ad6-4364-9ad3-e2ddab2999bb",
+		"name": "Mohammed Yousof",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "ddd",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "m1@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "default"
+						},
+						{
+							"key": "family_type",
+							"value": "1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "m1@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show product",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNWQ5MDVmN2Q2MWUyNDQ5ZWM2Y2Q2NWVmNjhhNjhjMGVjMGFkYWQ4MmEwMWVmNjc0NzNkMjFlNjNhYmVmYmFkMDhlMTA0MTFhZmFjOGFkNzQiLCJpYXQiOjE2NTU3NTY1MjkuMDUxNzkxLCJuYmYiOjE2NTU3NTY1MjkuMDUxODAyLCJleHAiOjE2ODcyOTI1MjguOTM1NzM4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.bVPGqKZKFLB19PPPfIeIhLyQd3FSX1-fIzC4gltloUXfRVIdR0wPVmreFeSIXcLKkUJx6I1mFeFh4RCaCeAzeCeKJddGvSq3eXnIGdEbho8emrxpFtpbOypQ8Mc6ucokzN0TAbrpAJQwpVZtvluz5K944vDfIoqsRKYoyCnleOl1DuIV9quDgt94ktALq8VCYuTuFpT86AZA9manL8WtOTHyNc7mMQVZh042F-MDcpwdJhuLz0SSBlae0q1urlVURPZBlhJlAcVh945xpqCtDw9rZx4Fbo8i1K4q86zLVPgtmqgWX4PtBM1ZrpjG-Mpipyz6UZ3E96giiQE-yW0SgQzjWa3WzbWrLfNg1YJ3W5dZu1OKAH0bzY_CzACO6041WbRo-7YWh8SkL0n9atL2z83DAH6259QcSl6ElJIEPGaFmY7cBJoI8Exf66ngBE7PnbjT0iKQJzN0Hpwji1K5bg8iLMXPE4h68poGm-MMgHa1Fo0JdcGyEJQuVJdq4lZRsqzlWmw_AoDKCUmC7uNwCNc4fX2IycWcy7P6dMIrjT2wVbja4yOpFxUBe9evXZCJkcaiuZOhxfm9Jz3JvAN3p4NIfkkaw1btGQh156xlq45pjGQMarYuO0uZBUfPs27iF0MaxYA2XlKM1wRVva1B1lDNH8sB-wMSqkhqGNNnnY8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/products",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNWQ5MDVmN2Q2MWUyNDQ5ZWM2Y2Q2NWVmNjhhNjhjMGVjMGFkYWQ4MmEwMWVmNjc0NzNkMjFlNjNhYmVmYmFkMDhlMTA0MTFhZmFjOGFkNzQiLCJpYXQiOjE2NTU3NTY1MjkuMDUxNzkxLCJuYmYiOjE2NTU3NTY1MjkuMDUxODAyLCJleHAiOjE2ODcyOTI1MjguOTM1NzM4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.bVPGqKZKFLB19PPPfIeIhLyQd3FSX1-fIzC4gltloUXfRVIdR0wPVmreFeSIXcLKkUJx6I1mFeFh4RCaCeAzeCeKJddGvSq3eXnIGdEbho8emrxpFtpbOypQ8Mc6ucokzN0TAbrpAJQwpVZtvluz5K944vDfIoqsRKYoyCnleOl1DuIV9quDgt94ktALq8VCYuTuFpT86AZA9manL8WtOTHyNc7mMQVZh042F-MDcpwdJhuLz0SSBlae0q1urlVURPZBlhJlAcVh945xpqCtDw9rZx4Fbo8i1K4q86zLVPgtmqgWX4PtBM1ZrpjG-Mpipyz6UZ3E96giiQE-yW0SgQzjWa3WzbWrLfNg1YJ3W5dZu1OKAH0bzY_CzACO6041WbRo-7YWh8SkL0n9atL2z83DAH6259QcSl6ElJIEPGaFmY7cBJoI8Exf66ngBE7PnbjT0iKQJzN0Hpwji1K5bg8iLMXPE4h68poGm-MMgHa1Fo0JdcGyEJQuVJdq4lZRsqzlWmw_AoDKCUmC7uNwCNc4fX2IycWcy7P6dMIrjT2wVbja4yOpFxUBe9evXZCJkcaiuZOhxfm9Jz3JvAN3p4NIfkkaw1btGQh156xlq45pjGQMarYuO0uZBUfPs27iF0MaxYA2XlKM1wRVva1B1lDNH8sB-wMSqkhqGNNnnY8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "product_id",
+							"value": "1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/order",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show order by user id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNWQ5MDVmN2Q2MWUyNDQ5ZWM2Y2Q2NWVmNjhhNjhjMGVjMGFkYWQ4MmEwMWVmNjc0NzNkMjFlNjNhYmVmYmFkMDhlMTA0MTFhZmFjOGFkNzQiLCJpYXQiOjE2NTU3NTY1MjkuMDUxNzkxLCJuYmYiOjE2NTU3NTY1MjkuMDUxODAyLCJleHAiOjE2ODcyOTI1MjguOTM1NzM4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.bVPGqKZKFLB19PPPfIeIhLyQd3FSX1-fIzC4gltloUXfRVIdR0wPVmreFeSIXcLKkUJx6I1mFeFh4RCaCeAzeCeKJddGvSq3eXnIGdEbho8emrxpFtpbOypQ8Mc6ucokzN0TAbrpAJQwpVZtvluz5K944vDfIoqsRKYoyCnleOl1DuIV9quDgt94ktALq8VCYuTuFpT86AZA9manL8WtOTHyNc7mMQVZh042F-MDcpwdJhuLz0SSBlae0q1urlVURPZBlhJlAcVh945xpqCtDw9rZx4Fbo8i1K4q86zLVPgtmqgWX4PtBM1ZrpjG-Mpipyz6UZ3E96giiQE-yW0SgQzjWa3WzbWrLfNg1YJ3W5dZu1OKAH0bzY_CzACO6041WbRo-7YWh8SkL0n9atL2z83DAH6259QcSl6ElJIEPGaFmY7cBJoI8Exf66ngBE7PnbjT0iKQJzN0Hpwji1K5bg8iLMXPE4h68poGm-MMgHa1Fo0JdcGyEJQuVJdq4lZRsqzlWmw_AoDKCUmC7uNwCNc4fX2IycWcy7P6dMIrjT2wVbja4yOpFxUBe9evXZCJkcaiuZOhxfm9Jz3JvAN3p4NIfkkaw1btGQh156xlq45pjGQMarYuO0uZBUfPs27iF0MaxYA2XlKM1wRVva1B1lDNH8sB-wMSqkhqGNNnnY8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/order",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show offers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNWQ5MDVmN2Q2MWUyNDQ5ZWM2Y2Q2NWVmNjhhNjhjMGVjMGFkYWQ4MmEwMWVmNjc0NzNkMjFlNjNhYmVmYmFkMDhlMTA0MTFhZmFjOGFkNzQiLCJpYXQiOjE2NTU3NTY1MjkuMDUxNzkxLCJuYmYiOjE2NTU3NTY1MjkuMDUxODAyLCJleHAiOjE2ODcyOTI1MjguOTM1NzM4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.bVPGqKZKFLB19PPPfIeIhLyQd3FSX1-fIzC4gltloUXfRVIdR0wPVmreFeSIXcLKkUJx6I1mFeFh4RCaCeAzeCeKJddGvSq3eXnIGdEbho8emrxpFtpbOypQ8Mc6ucokzN0TAbrpAJQwpVZtvluz5K944vDfIoqsRKYoyCnleOl1DuIV9quDgt94ktALq8VCYuTuFpT86AZA9manL8WtOTHyNc7mMQVZh042F-MDcpwdJhuLz0SSBlae0q1urlVURPZBlhJlAcVh945xpqCtDw9rZx4Fbo8i1K4q86zLVPgtmqgWX4PtBM1ZrpjG-Mpipyz6UZ3E96giiQE-yW0SgQzjWa3WzbWrLfNg1YJ3W5dZu1OKAH0bzY_CzACO6041WbRo-7YWh8SkL0n9atL2z83DAH6259QcSl6ElJIEPGaFmY7cBJoI8Exf66ngBE7PnbjT0iKQJzN0Hpwji1K5bg8iLMXPE4h68poGm-MMgHa1Fo0JdcGyEJQuVJdq4lZRsqzlWmw_AoDKCUmC7uNwCNc4fX2IycWcy7P6dMIrjT2wVbja4yOpFxUBe9evXZCJkcaiuZOhxfm9Jz3JvAN3p4NIfkkaw1btGQh156xlq45pjGQMarYuO0uZBUfPs27iF0MaxYA2XlKM1wRVva1B1lDNH8sB-wMSqkhqGNNnnY8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/offers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"offers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,7 +1,7 @@
 @extends('layouts.app')
-@section('products_open','menu-open')
-@section('products','active')
-@section('products_index','active')
+@section('offers_open','menu-open')
+@section('offers','active')
+@section('offers_index','active')
 
 @section('content')
 
@@ -14,7 +14,7 @@
                 <div class="card-header">
                     <h3 class="card-title">
                     {{-- <img src="{{asset('uploads/location.png')}}" class="image-title-card" alt="medical-center-location"> --}}
-                        كل  المنتجات
+                        كل  العروض
                     </h3>
                 </div>
                 <!-- /.card-header -->
@@ -23,10 +23,8 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>اسم المنتج</th>
-                                <th>الكمية</th>
-                                <th>نوع الكمية</th>
-                                <th>يمتمي للاسرة </th>
+                                <th>عنوان العرض</th>
+                                <th>تفاصيل العرض</th>
                                 <th>العمليات</th>
                             </tr>
                         </thead>
@@ -35,24 +33,14 @@
                             <tr>
                                 <td>{{$index++}}</td>
                                 <td>{{$item->name}}</td>
-                                <td>{{$item->amount}}</td>
-                                <td>{{$item->type}}</td>
-                                <td>
-                                    @if($item->family_type == 1)
-                                    اسرة صغيرة
-                                    @elseif($item->family_type == 2)
-                                    اسرة متوسطة
-                                    @else
-                                    اسرة كبيرة
-                                    @endif
-                                </td>
+                                <td>{{$item->details}}</td>
 
                                 <td>
                                     <div>
-                                        <form action="{{route('products.destroy',$item->id)}}" method="POST">
+                                        <form action="{{route('offers.destroy',$item->id)}}" method="POST">
                                             {{ csrf_field()}}
                                             {{ method_field('delete') }}
-                                            <a href="{{route('products.edit',$item->id)}}" class="btn btn-primary">
+                                            <a href="{{route('offers.edit',$item->id)}}" class="btn btn-primary">
                                                 <span>تعديل</span>
                                                 <i class="fa fa-refresh"></i>
                                             </a>

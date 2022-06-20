@@ -27,7 +27,10 @@ Route::group(['namespace' => 'App\Http\Controllers\Api'], function () {
     #####################  Start Middleware ####################
     ############################################################
     Route::group(['middleware' => ['auth:api']], function () {
-        Route::post('products', 'ApiController@products'); #TEST Done
+        Route::get('products', 'ApiController@products'); #TEST Done
+        Route::post('order', 'ApiController@add_order'); #TEST Done
+        Route::get('order', 'ApiController@get_order'); #TEST Done
+        Route::get('offers', 'ApiController@offers'); #TEST Done
 
     });
     ############################################################

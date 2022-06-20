@@ -1,7 +1,7 @@
 @extends('layouts.app')
-@section('products_open','menu-open')
-@section('products','active')
-@section('products_create','active')
+@section('offers_open','menu-open')
+@section('offers','active')
+@section('offers_create','active')
 @section('content')
 
 <section class="content">
@@ -14,52 +14,35 @@
                     <div class="card-header">
                         <h3 class="card-title">
                         {{-- <img src="{{asset('uploads/add_list_64px.png')}}" class="image-title-card" alt="medical-center-add"> --}}
-                            إضافة منتج جديد
+                            إضافة عرض جديد
                         </h3>
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form method="POST" action="{{route('products.store')}}" class="form-horizontal">
+                    <form method="POST" action="{{route('offers.store')}}" class="form-horizontal">
                         @csrf
                         <div class="card-body custom-design">
 
                             <div class="form-group row">
-                                <label class="col-md-3 col-sm-3 col-xs-4 control-label">اسم المنتج </label>
+                                <label class="col-md-3 col-sm-3 col-xs-4 control-label">اسم العرض </label>
                                 <div class="col-md-6 col-sm-9 col-xs-8">
                                     <input required type="text"  class="form-control" name="name" >
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label class="col-md-3 col-sm-3 col-xs-4 control-label">الكمية</label>
+                                <label class="col-md-3 col-sm-3 col-xs-4 control-label">تفاصيل العرض</label>
                                 <div class="col-md-6 col-sm-9 col-xs-8">
-                                    <input required type="number"  class="form-control" name="amount" >
+                                    <textarea required name="details" class="form-control" cols="30" rows="10"></textarea>
                                 </div>
                             </div>
 
-                            <div class="form-group row">
-                                <label class="col-md-3 col-sm-3 col-xs-4 control-label">نوع الكمية</label>
-                                <div class="col-md-6 col-sm-9 col-xs-8">
-                                    <input required type="text"  class="form-control" name="type" >
-                                </div>
-                            </div>
 
-                            <div class="form-group row">
-                                <label class="col-md-3 col-sm-3 col-xs-4 control-label">الاسرة</label>
-                                <div class="col-md-6 col-sm-9 col-xs-8">
-                                    <select required class="form-control" name="family_type" id="">
-                                        <option value="">اختر الاسرة</option>
-                                        <option value="1">اسرة صغيرة</option>
-                                        <option value="2">اسرة متوسطة</option>
-                                        <option value="3">اسرة كبيرة</option>
-                                    </select>
-                                </div>
-                            </div>
 
                             <!-- /.card-body -->
                             {{-- <div class="card-footer"> --}}
                             <div class="form-group row">
-                                 <div class="col-md-3 col-sm-3 col-xs-4"></div>
+                                <div class="col-md-3 col-sm-3 col-xs-4"></div>
                                 <button type="submit" class="btn btn-block btn-info col-md-6 col-sm-9 col-xs-8">
                                     <span>إضـــافة</span>
                                     <i class="fa fa-send"></i>

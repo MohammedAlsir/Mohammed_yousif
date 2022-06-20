@@ -1,7 +1,7 @@
 @extends('layouts.app')
-@section('products_open','menu-open')
-@section('products','active')
-@section('products_index','active')
+@section('report_open','menu-open')
+@section('report','active')
+@section('report_index','active')
 
 @section('content')
 
@@ -14,7 +14,7 @@
                 <div class="card-header">
                     <h3 class="card-title">
                     {{-- <img src="{{asset('uploads/location.png')}}" class="image-title-card" alt="medical-center-location"> --}}
-                        كل  المنتجات
+                       تقرير عن المنتجات
                     </h3>
                 </div>
                 <!-- /.card-header -->
@@ -27,11 +27,10 @@
                                 <th>الكمية</th>
                                 <th>نوع الكمية</th>
                                 <th>يمتمي للاسرة </th>
-                                <th>العمليات</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($collection as $item)
+                            @foreach ($products as $item)
                             <tr>
                                 <td>{{$index++}}</td>
                                 <td>{{$item->name}}</td>
@@ -47,22 +46,6 @@
                                     @endif
                                 </td>
 
-                                <td>
-                                    <div>
-                                        <form action="{{route('products.destroy',$item->id)}}" method="POST">
-                                            {{ csrf_field()}}
-                                            {{ method_field('delete') }}
-                                            <a href="{{route('products.edit',$item->id)}}" class="btn btn-primary">
-                                                <span>تعديل</span>
-                                                <i class="fa fa-refresh"></i>
-                                            </a>
-                                            <button type="submit" class="btn btn-danger"></i>&nbsp;
-                                                <span>حذف</span>
-                                                <i class="fa fa-trash"></i>
-                                            </button>
-                                        </form>
-                                    </div>
-                                </td>
                             </tr>
                             @endforeach
 

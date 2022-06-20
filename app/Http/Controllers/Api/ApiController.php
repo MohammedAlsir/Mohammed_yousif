@@ -101,12 +101,12 @@ class ApiController extends Controller
             return response()->json([
                 'error' => false,
                 'message' => $validator->errors()->all(),
-            ], 422);
+            ], 200);
         } elseif (Product::find($request->product_id)->family_type != Auth::user()->family_type) {
             return response()->json([
                 'error' => false,
                 'message' => 'هذا العنصر غير متاح لك ',
-            ], 422);
+            ], 200);
         }
 
         // == add new reservations  ==

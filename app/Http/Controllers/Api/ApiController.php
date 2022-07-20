@@ -7,6 +7,7 @@ use App\Models\Offer;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -96,6 +97,18 @@ class ApiController extends Controller
                 'product_id' => 'required|exists:products,id',
             ]
         );
+
+        $check_order = Order::where('product_id', $request->product_id)
+            ->where('user_id', Auth::user()->id)
+            ->whereMonth('created_at', '=', Carbon::now()->month)
+            ->whereYear('created_at', '=', Carbon::now()->year)
+            ->first();
+        if ($check_order) {
+            return response()->json([
+                'error' => false,
+                'message' => 'لا يمكنك طلب نفس العنصر اكثر من مرة خلال نفس الشهر ',
+            ], 200);
+        }
         // == check data ==
         if ($validator->fails()) {
             return response()->json([

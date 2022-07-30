@@ -31,7 +31,36 @@
                             </a>
                         </li>
 
-                        {{-- المنتجات --}}
+                        {{-- الأعضاء --}}
+                        <li class="nav-item has-treeview  @yield('users_open')">
+                            <a href="#" class="nav-link @yield('users')">
+                            <i class="nav-icon fas fa-th"></i>
+                            {{-- <img src="{{asset('uploads/location_64px.png')}}" alt=""> --}}
+
+                            <p>
+                            <i class="right fas fa-angle-left"></i>
+                            الأعضاء
+                            </p>
+                            </a>
+                            <ul class="nav nav-treeview" >
+                                <li class="nav-item">
+                                    <a href="{{route('users.index')}}" class="nav-link @yield('users_index')">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>كل الأعضاء</p>
+                                    </a>
+                                </li>
+                                {{-- <li class="nav-item">
+                                    <a href="{{route('users.create')}}" class="nav-link @yield('users_create')">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>إضافة منتج جديد</p>
+                                    </a>
+                                </li> --}}
+                            </ul>
+                        </li>
+                        {{-- الأعضاء --}}
+
+
+                          {{-- المنتجات --}}
                         <li class="nav-item has-treeview  @yield('products_open')">
                             <a href="#" class="nav-link @yield('products')">
                             <i class="nav-icon fas fa-th"></i>
@@ -87,6 +116,34 @@
                         </li>
                         {{-- العروض --}}
 
+
+                         {{-- الطلبات  --}}
+                        <li class="nav-item has-treeview  @yield('orders_open')">
+                            <a href="#" class="nav-link @yield('orders')">
+                            <i class="nav-icon fas fa-th"></i>
+                            {{-- <img src="{{asset('uploads/location_64px.png')}}" alt=""> --}}
+
+                            <p>
+                            <i class="right fas fa-angle-left"></i>
+                            الطلبات
+                            </p>
+                            </a>
+                            <ul class="nav nav-treeview" >
+                                <li class="nav-item">
+                                    <a href="{{route('orders.index')}}" class="nav-link @yield('orders_index')">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>كل الطلبات </p>
+                                    </a>
+                                </li>
+                                {{-- <li class="nav-item">
+                                    <a href="{{route('orders.create')}}" class="nav-link @yield('orders_create')">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>إضافة منتج جديد</p>
+                                    </a>
+                                </li> --}}
+                            </ul>
+                        </li>
+                        {{-- الطلبات  --}}
 
                         {{-- التقارير --}}
                         <li class="nav-item has-treeview  @yield('report_open')">

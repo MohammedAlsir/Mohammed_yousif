@@ -49,6 +49,8 @@ Route::namespace('App\Http\Controllers')->middleware('auth')->group(function () 
     route::resource('products', 'ProductController');
 
     route::resource('offers', 'OfferController');
+    route::resource('users', 'UsersController');
+    route::resource('orders', 'OrderController');
 
     route::get('report/product', 'ReportController@product')->name('report.product');
     route::get('report/index', 'ReportController@index')->name('report.index');

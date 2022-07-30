@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Offer;
+use App\Models\User;
 use App\Traits\Oprations;
 use Illuminate\Http\Request;
 
-class OfferController extends Controller
+class UsersController extends Controller
 {
     use Oprations;
+
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +17,7 @@ class OfferController extends Controller
      */
     public function index()
     {
-        return $this->index_data(Offer::class, 'offers.index');
+        return $this->index_data(User::class, 'users.index');
     }
 
     /**
@@ -26,7 +27,7 @@ class OfferController extends Controller
      */
     public function create()
     {
-        return $this->create_date('offers.create');
+        //
     }
 
     /**
@@ -37,7 +38,7 @@ class OfferController extends Controller
      */
     public function store(Request $request)
     {
-        return $this->store_data(Offer::class, $request, 'offers.index');
+        //
     }
 
     /**
@@ -59,7 +60,7 @@ class OfferController extends Controller
      */
     public function edit($id)
     {
-        return $this->edit_data(Offer::class, $id, 'offers.edit');
+        return $this->edit_data(User::class, $id, 'users.edit');
     }
 
     /**
@@ -71,7 +72,7 @@ class OfferController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return $this->update_data(Offer::class, $request, $id, 'offers.index');
+        return $this->update_data(User::class, $request, $id, 'users.index');
     }
 
     /**
@@ -82,6 +83,6 @@ class OfferController extends Controller
      */
     public function destroy($id)
     {
-        return $this->delete_data(Offer::class, $id, 'offers.index');
+        return $this->delete_data(User::class, $id, 'users.index');
     }
 }

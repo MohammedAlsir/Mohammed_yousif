@@ -34,5 +34,11 @@
   <!-- Custom style for RTL -->
   <link rel="stylesheet" href="{{asset('dist/css/custom.css')}}">
 
+
+  <style>
+    table{
+        text-align: center;
+    }
+  </style>
 </head>
 

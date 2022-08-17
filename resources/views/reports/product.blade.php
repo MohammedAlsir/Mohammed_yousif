@@ -14,7 +14,7 @@
                 <div class="card-header">
                     <h3 class="card-title">
                     {{-- <img src="{{asset('uploads/location.png')}}" class="image-title-card" alt="medical-center-location"> --}}
-                        تقرير عن عدد المنتجات
+                        تقرير عن عدد الطلبيات
                     </h3>
                 </div>
                 <!-- /.card-header -->

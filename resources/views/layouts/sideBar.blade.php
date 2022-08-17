@@ -160,7 +160,7 @@
                                 <li class="nav-item">
                                     <a href="{{route('report.product')}}" class="nav-link @yield('report_product')">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>تقرير عدد المنتجات</p>
+                                    <p>تقرير عدد الطلبيات</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">

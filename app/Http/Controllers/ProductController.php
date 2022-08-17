@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Traits\Oprations;
 use Illuminate\Http\Request;
+use PhpParser\Node\Expr\New_;
 
 class ProductController extends Controller
 {
@@ -37,7 +38,23 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        return $this->store_data(Product::class, $request, 'products.index');
+        // return $this->store_data(Product::class, $request, 'products.index');
+        $product = new Product();
+        if ($request->amount1) {
+            $product->amount = $request->amount1;
+        }
+        if ($request->amount2) {
+            $product->amount = $request->amount2;
+        }
+        if ($request->amount3) {
+            $product->amount = $request->amount3;
+        }
+
+        $product->family_type = $request->family_type;
+        $product->name = $request->name;
+        $product->type = $request->type;
+        $product->save();
+        return redirect()->route('products.index');
     }
 
     /**

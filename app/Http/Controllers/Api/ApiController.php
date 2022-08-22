@@ -126,6 +126,7 @@ class ApiController extends Controller
         $order = new Order();
         $order->product_id = $request->product_id;
         $order->user_id = Auth::user()->id;
+        $order->family_type = Auth::user()->family_type;
         $order->save();
 
         return response()->json([
